@@ -1,0 +1,314 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>structure</title>
+        <link rel="stylesheet" href="style 2.css"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+         <!-- Fixed Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#showcase">Showcase</a></li>
+            <li><a href="#formal-qualities">Formal-Qualities</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+        <header>
+            <section id="home" class="section hero">
+                <h1>Explore Merriweather</h1>
+
+                <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+    $( ".notdraggable" ).notdraggable();
+    } );
+  </script>
+                <img class="notdraggable" src="images/illustration_ID.png" alt="images/illustration_ID.png" style="width: 180px;">
+                <p class="intro">A journey through the bold and elegant serif typeface that’s designed for readability and expression.</p>
+            </section>
+        </header>
+
+        <div class="container">
+            <div class="card" onclick="showInfo('bold')">
+                <div class="content">Bold</div>
+                <div class="info" id="bold-info"></div>
+            </div>
+            <div class="card" onclick="showInfo('light')">
+                <div class="content">Light</div>
+                <div class="info" id="light-info"></div>
+            </div>
+            <div class="card" onclick="showInfo('italic')">
+                <div class="content">Italic</div>
+                <div class="info" id="italic-info"></div>
+            </div>
+            <div class="card" onclick="showInfo('regular')">
+                <div class="content">Regular</div>
+                <div class="info" id="regular-info"></div>
+            </div>
+        </div>
+
+        <div id="showcase" class="showcase">
+ <script>
+            function showInfo(style) {
+                const infoElements = document.querySelectorAll('.info');
+                infoElements.forEach(element => element.style.display = 'none');
+    
+                let content = '';
+                switch(style) {
+                    case 'bold':
+                        content = '<strong>Merriweather Bold: Fun Fact - Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible!</strong>';
+                        document.getElementById('bold-info').innerHTML = content;
+                        document.getElementById('bold-info').style.display = 'block';
+                        break;
+                    case 'light':
+                        content = '<span style="font-weight: 300;">Merriweather Light: Motivational Quote - "The only way to do great work is to love what you do." - Steve Jobs</span>';
+                        document.getElementById('light-info').innerHTML = content;
+                        document.getElementById('light-info').style.display = 'block';
+                        break;
+                    case 'italic':
+                        content = '<em>Merriweather Italic: Fun Fact - Bananas are berries, but strawberries aren’t!</em>';
+                        document.getElementById('italic-info').innerHTML = content;
+                        document.getElementById('italic-info').style.display = 'block';
+                        break;
+                    case 'regular':
+                        content = 'Merriweather Regular: Motivational Quote - "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful." - Albert Schweitzer';
+                        document.getElementById('regular-info').innerHTML = content;
+                        document.getElementById('regular-info').style.display = 'block';
+                        break;
+                }
+            }
+</script>
+</div>
+        <main>
+            <div id="anatomy" class="anatomy">
+                <div class="h1">
+                    abcdefghijklmnopqrstuvwxyz
+                    <div class="h2">
+                        Lower Case
+                    </div>
+
+                </div>
+                <div class="h3">
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+
+                    <div class="h4">
+                        UPPER CASE
+                    </div>
+                </div>
+
+
+                
+</div>
+            </div>
+                
+            <!--<div class="hidden" >
+                <div class="visible">
+                    <img class="frml" src="images/FORMAL_QUALITIES.png" alt="images/FORMAL_QUALITIES.png">
+                 </div>
+            <img class="frml" src="images/cupcakes copy.png" alt="images/cupcakes copy.png">
+        </div>
+        
+
+    </div> 
+-->
+</main>
+
+            <section class="button" > 
+            <a href="#" class="neon-button">Merriweather</a>
+</section> 
+<section id="formal-qualities" class="section formal-qualities">
+    <div class="h2">
+       Formal Qualities 
+    </div>
+    
+    <div class="qualities-grid">
+        <div class="quality-box" data-info="Merriweather has a very large x-height, making it highly readable.">
+            <h3>Large x-height</h3>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+        </div>
+        <div class="quality-box" data-info="Merriweather features slightly condensed letterforms, which help save space.">
+            <h3>Condensed Letterforms</h3>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+        </div>
+        <div class="quality-box" data-info="The typeface has a mild diagonal stress, adding a dynamic feel.">
+            <h3>Diagonal Stress</h3>
+            <p>Dynamic Feel</p>
+        </div>
+        <div class="quality-box" data-info="Sturdy serifs provide a strong and stable appearance.">
+            <h3>Sturdy Serifs</h3>
+            <p>Strong & Stable</p>
+        </div>
+        <div class="quality-box" data-info="Open forms enhance readability, especially on screens.">
+            <h3>Open Forms</h3>
+            <p>Enhanced Readability</p>
+        </div>
+    </div>
+    <div class="info-box" id="infoBox"></div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const qualityBoxes = document.querySelectorAll('.quality-box');
+        const infoBox = document.getElementById('infoBox');
+
+        qualityBoxes.forEach(box => {
+            box.addEventListener('click', () => {
+                const info = box.getAttribute('data-info');
+                infoBox.textContent = info;
+                infoBox.style.display = 'block';
+                infoBox.style.opacity = '1';
+            });
+
+            box.addEventListener('mouseover', () => {
+                box.style.transform = 'scale(1.05)';
+            });
+
+            box.addEventListener('mouseout', () => {
+                box.style.transform = 'scale(1)';
+            });
+        });
+    });
+</script>
+
+<!--<section id="visuals" class="sectionvisuals">
+    
+    <div class="h_3">
+        Formal Qualities
+        <div class="h4">
+            Aa
+        <div class="h5">
+            Hh
+        </div>
+        </div>
+
+    </div>
+
+</section> -->
+<!--<div class="box">
+     <span class="word" 
+     data-info="Merriweather was designed to be a text face that is pleasant to read on screens. It features a very large x height, slightly condensed letterforms, a mild diagonal stress, sturdy serifs and open forms.The Merriweather project is led by Sorkin Type, a type design foundry based in Western Massachaussets, USA.">
+     ClickMe
+    </span>
+     </div>
+      <div class="info-box" id="infoBox">
+
+      </div>
+      <script> 
+      document.addEventListener('DOMContentLoaded', () => { const word = document.querySelector('.word');
+       const infoBox = document.getElementById('infoBox'); 
+       word.addEventListener('click', () => { const info = word.getAttribute('data-info'); 
+       infoBox.textContent = info; infoBox.style.display = 'block'; 
+       word.style.transition = 'opacity 0.5s'; 
+       word.style.opacity = '0'; 
+       infoBox.style.opacity = '1'; // Show info with fade in effect 
+       }); 
+    });
+    </script> -->
+
+    <section id="fun-section" class="section fun-section">
+        <div class="h2">
+            CLICK ME
+         </div>
+        <div class="ball-container" id="ballContainer"></div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ballContainer = document.getElementById('ballContainer');
+            const words = ["Readable", "Elegant", "Bold", "Serif", "Modern", "Classic"];
+
+            ballContainer.addEventListener('click', (event) => {
+                const ball = document.createElement('div');
+                ball.className = 'ball';
+                ball.style.left = `${event.clientX - 25}px`;
+                ball.style.top = `${event.clientY - 25}px`;
+                ball.style.backgroundColor = getRandomColor();
+                ball.textContent = words[Math.floor(Math.random() * words.length)];
+                ballContainer.appendChild(ball);
+
+                setTimeout(() => {
+                    ball.remove();
+                }, 3000);
+            });
+
+            function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        });
+    </script> 
+<footer> 
+    <div>
+     <div class="volumecontainer">
+        <label for="volume">SCALE:</label>
+        <input type="range" id="volume" class="volume-control" min="10" max="50" value="16">
+   
+    <div class="text" id="text"> The quick brown fox jumps over the lazy dog.</div>
+
+    <script>
+        const volumeControl = document.getElementById('volume');
+        const text = document.getElementById('text');
+
+        volumeControl.addEventListener('input', function() {
+            text.style.fontSize = `${this.value}px`;
+        });
+    
+    </script> 
+    </div>
+</div>
+</footer> 
+<!--<footer> 
+    <div class="marquee">
+        <div class="track">
+          <div class="content">&nbsp; Aa Bb Cc Dd Ee Ff Gg 
+            Hh Ii Jj Kk Ll Mm Nn 
+            Oo Pp Qq Rr Ss Tt Uu 
+            Vv Ww Xx Yy Zz Aa Bb Cc Dd Ee Ff Gg 
+            Hh Ii Jj Kk Ll Mm Nn 
+            Oo Pp Qq Rr Ss Tt Uu 
+            Vv Ww Xx Yy Zz Aa Bb Cc Dd Ee Ff Gg 
+            Hh Ii Jj Kk Ll Mm Nn 
+            Oo Pp Qq Rr Ss Tt Uu 
+            Vv Ww Xx Yy Zz Aa Bb Cc Dd Ee Ff Gg 
+            Hh Ii Jj Kk Ll Mm Nn 
+            Oo Pp Qq Rr Ss Tt Uu 
+            Vv Ww Xx Yy Zz </div>
+        </div>
+      </div>
+</footer> -->
+<!-- 
+<footer>
+        <section id="interactive" class="section interactive">
+        <h2>Interactive Effects</h2>
+        <p class="hover-effect">Hover Over Me</p>
+        <p class="click-effect">Click Me</p>
+        <p class="typing-effect">Watch the Typing Effect</p>
+</footer>  -->
+ <div id="about" class="section about">
+    <h2>About Merriweather</h2>
+    <p></p>
+    <p>Merriweather is a serif typeface designed for readability in both digital and print media. With its warm yet crisp lines, it strikes a balance between traditional and modern, making it perfect for long-form text and bold headlines alike.</p>
+ </div> 
+<section id="contact" class="section contact">
+    <p>Made with ❤️ for Typography Lovers. Designed by Hajra Siddique.</p>
+    <p>@hsiddi@gmail.com</p>
+    <p>201-999-9999</p>
+
+</section>
+
+</body>   
+
+            
+</html>
